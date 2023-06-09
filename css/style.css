@@ -1,10 +1,12 @@
-html, body {
-    height: 100%;
+body {
+    height: 100vh;
+    margin: 0;
 }
 
 header {
     display: flex;
     justify-content: space-between;
+    background-color: #a3a3cf;
 }
 
 .high_scores {
@@ -27,5 +29,22 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: aliceblue;
 
 }
+
+
+
+
+
+footer {
+    background-color: #a3a3cf;
+    text-align: center;
+    font-size: 24px;
+}
+
+.page-break-line {
+    width: 75%;
+    border: none;
+    border-top: 5px solid black;
+  }
