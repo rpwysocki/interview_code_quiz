@@ -1,3 +1,88 @@
+var startButton = document.getElementById("startButton");
+var quizContainer = document.getElementById("quizContainer");
+var questionElement = document.getElementById("question");
+var choicesElement = document.getElementById("choices");
+var submitButton = document.getElementById("submitButton");
+
+var currentQuestionIndex = 0;
+var score = 0;
+
+var questions = [
+  {
+    question: "Question 1: What is the capital of France?",
+    choices: ["Paris", "London", "Madrid", "Rome"],
+    correctAnswer: 0
+  },
+  {
+    question: "Question 2: Which planet is known as the Red Planet?",
+    choices: ["Mars", "Venus", "Jupiter", "Mercury"],
+    correctAnswer: 0
+  },
+  // Add more questions here...
+];
+
+function showQuestion() {
+  var question = questions[currentQuestionIndex];
+  questionElement.textContent = question.question;
+
+  choicesElement.innerHTML = "";
+  for (var i = 0; i < question.choices.length; i++) {
+    var choice = question.choices[i];
+    var li = document.createElement("li");
+    li.textContent = choice;
+    choicesElement.appendChild(li);
+  }
+}
+
+function checkAnswer() {
+  var selectedChoice = choicesElement.querySelector("li.selected");
+  if (selectedChoice) {
+    var selectedAnswer = Array.from(choicesElement.children).indexOf(selectedChoice);
+    if (selectedAnswer === questions[currentQuestionIndex].correctAnswer) {
+      score++;
+    }
+    selectedChoice.classList.remove("selected");
+    currentQuestionIndex++;
+    if (currentQuestionIndex === questions.length) {
+      endQuiz();
+    } else {
+      showQuestion();
+    }
+  }
+}
+
+function endQuiz() {
+  quizContainer.innerHTML = "<h2>Quiz Completed!</h2>" +
+    "<p>Your score: " + score + " out of " + questions.length + "</p>";
+}
+
+startButton.addEventListener("click", function() {
+  startButton.style.display = "none";
+  quizContainer.style.display = "block";
+  showQuestion();
+});
+
+choicesElement.addEventListener("click", function(event) {
+  if (event.target.nodeName === "LI") {
+    event.target.classList.toggle("selected");
+  }
+});
+
+submitButton.addEventListener("click", checkAnswer);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Questions supplied from Chat GPT
 
 // Which of the following is NOT a programming language used for web development?

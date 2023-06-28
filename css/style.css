@@ -1,6 +1,26 @@
+/* Resets */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  body {
+    min-height: 100%;
+    line-height: 1;
+    font-family: sans-serif;
+  } */
+
+
+/* Global */
+
 body {
     height: 100vh;
-    margin: 0;
+    margin: 25px;
 }
 
 header {
@@ -9,6 +29,21 @@ header {
     background-color: #a3a3cf;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+
+}
+
+footer {
+    background-color: #a3a3cf;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* CUSTOM STYLES */ 
 .high_scores {
     text-align: left;
     font-size: 24px;
@@ -20,26 +55,8 @@ header {
 
 }
 
-.timer {
+#timer {
     text-align: right;
-    font-size: 24px;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: aliceblue;
-
-}
-
-
-
-
-
-footer {
-    background-color: #a3a3cf;
-    text-align: center;
     font-size: 24px;
 }
 
