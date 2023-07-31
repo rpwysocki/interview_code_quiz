@@ -28,7 +28,7 @@
   }
   
   #timer {
-    border: 2px solid rgba(0, 0, 0, 0.6);
+    border: 2px solid #00000099;
     border-radius: 10px;
     padding: 4px;
     text-align: center;
@@ -60,7 +60,7 @@
   
   #start-btn {
     font-family: 'Verdana', sans-serif;
-    background-color: rgb(115, 194, 220);
+    background-color: #73c2dc;
     color: white;
     margin-top: 10px;
     padding: 10px 30px;
@@ -88,7 +88,7 @@
   
   .choices button {
     padding: 10px 30px;
-    background-color: rgba(240, 240, 240, 0.26);
+    background-color: #f0f0f042;
     border: 1px solid #DFDFDF;
     cursor: pointer;
     line-height: 20px;
@@ -100,7 +100,7 @@
   
   .choices button:hover {
     background-color: #FFFFFF;
-    border-color: rgba(0, 0, 0, 0.19);
+    border-color: #00000030;
   }
   #end-screen {
     display: flex;
@@ -120,7 +120,7 @@
     cursor:pointer;
     width: 300px;
     font-family: 'Verdana', sans-serif;
-    background-color: rgb(115, 194, 220);
+    background-color: #73c2dc;
     border: 1px solid #DFDFDF;
     color: white;
     justify-content: center;
